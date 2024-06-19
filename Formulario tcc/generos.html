@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gêneros - Biblioteca Digital do Navas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #bba8d9, #e4def8);
+            color: #333;
+        }
+
+        header {
+            background-color: #7e6dab;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-container input[type=text] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5a4a82;
+            color: white;
+            cursor: pointer;
+        }
+
+        .generos {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .generos-title {
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .generos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .genero {
+            background-color: #ffffff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            width: 120px;
+            text-align: center;
+            display: block;
+        }
+
+        footer {
+            background-color: #7e6dab;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Biblioteca Digital do Navas</h1>
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="index.html">Login</a>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Pesquisar gêneros...">
+        <button id="genero-btn">Pesquisar</button>
+    </div>
+
+    <section class="generos">
+        <h2 class="generos-title">Gêneros</h2>
+        <ul id="genero-list" class="generos-container">
+            <li class="genero">Arte</li>
+            <li class="genero">Clássico</li>
+            <li class="genero">Conto</li>
+            <li class="genero">Crônica</li>
+            <li class="genero">Dança</li>
+            <li class="genero">Ed. Física</li>
+            <li class="genero">Fábula</li>
+            <li class="genero">Ficção</li>
+            <li class="genero">Filosofia</li>
+            <li class="genero">Folclore</li>
+            <li class="genero">Fundamental</li>
+            <li class="genero">Geografia</li>
+            <li class="genero">História</li>
+            <li class="genero">Infantil</li>
+            <li class="genero">Inglês</li>
+            <li class="genero">Literatura</li>
+            <li class="genero">Matemática</li>
+            <li class="genero">Música</li>
+            <li class="genero">Poemas</li>
+            <li class="genero">Poesia</li>
+            <li class="genero">Português</li>
+            <li class="genero">Religião</li>
+            <li class="genero">Romance</li>
+            <li class="genero">Sociologia</li>
+            <li class="genero">Teatro</li>
+            <li class="genero">Terror</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Biblioteca Digital do Navas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('search-input').addEventListener('input', function(e) {
+            let inputed = e.target.value.toLowerCase();
+            let items = document.querySelectorAll('#genero-list .genero');
+            
+            items.forEach(function(item) {
+                let text = item.textContent.toLowerCase();
+                if (text.includes(inputed)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
