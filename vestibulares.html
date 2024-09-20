@@ -35,16 +35,17 @@
         }
         
         /* Estilo da navegação */
-        nav ul {
+        /* Estilo da navegação */
+nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
     justify-content: center; /* Centraliza os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
 }
 
 nav ul li {
-    margin: 10px; /* Espaço entre os itens */
+    margin: 5px; /* Espaço entre os itens */
 }
 
 nav ul li a {
@@ -59,14 +60,16 @@ nav ul li a {
 /* Estilo responsivo */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Empilha os itens verticalmente */
-        align-items: center; /* Centraliza os itens */
+        flex-direction: row; /* Mantém os itens na horizontal */
+        align-items: center; /* Alinha os itens ao centro */
+        overflow-x: auto; /* Permite rolagem horizontal se necessário */
     }
 
     nav ul li {
-        margin: 5px 0; /* Reduz a margem vertical */
+        margin: 5px; /* Espaço entre os itens */
     }
 }
+
         
         /* Estilo principal */
         main {
