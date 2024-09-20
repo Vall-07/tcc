@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <meta name="description" content="Biblioteca Virtual de Aprendizagem.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Online</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulões.html">Aulões</a></li>
+                <li><a href="universidades.html">Universidades</a></li>
+                <li><a href="biblio.html">Biblioteca</a></li>
+                <li><a href="vestibulares.html">Vestibulares</a></li>
+                <li><a href="orientacao.html">Orientação Profissional</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Catálogo de Livros</h2>
+        <section class="busca-rapida">
+            <input type="text" id="search" placeholder="Buscar conteúdo..." onkeyup="buscarConteudo()">
+        </section>
+        <div id="book-container" class="container">
+            <div class="box">
+                <h1 class="titlesbook">A Dança dos Dragões - As Crônicas de Gelo e Fogo - Livro 5</h1>
+                <div class="content">
+                    <p><a href="A Dança dos Dragões - As Crônicas de Gelo e Fogo - Livro 5 (George R. R. Martin) (Z-Library).pdf"><img class="livrocapa" src="img/roxo.jpg" alt="Capa do Livro"></a></p>
+                    <p>Em “A Dança dos Dragões”, o quinto livro da série “As Crônicas de Gelo e Fogo”, a luta pelo Trono de Ferro continua...</p>
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="titlesbook">A Fúria dos Reis - As Crônicas de Gelo e Fogo</h1>
+                <div class="content">
+                    <p><a href="A Fúria dos Reis As Crônicas de Gelo e Fogo (Martin, George R R) (Z-Library).epub"><img class="livrocapa" src="A Fúria dos Reis As Crônicas de Gelo e Fogo.jpg" alt="Capa do Livro"></a></p>
+                    <p>A Fúria dos Reis, o segundo livro da aclamada série As Crônicas de Gelo e Fogo escrita por George R. R. Martin...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Acesse também no <a href="youtube.com">YouTube</a></p>
+        <p>Acesse também no <a href="instagram.com">Instagram</a></p>
+    </footer>
+    <script>function buscarConteudo() {
+        var input, filter, container, items, title, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+    
+        // Verifica se o input existe
+        if (!input) return;
+    
+        // Define o container
+        container = document.getElementById("book-container");
+        if (!container) return; // Se o contêiner não existir, sai da função
+    
+        items = container.getElementsByClassName("box");
+    
+        // Se não houver itens, sai da função
+        if (!items.length) return;
+    
+        for (var i = 0; i < items.length; i++) {
+            title = items[i].getElementsByClassName("titlesbook")[0]; // Acha o título do livro
+            if (title) {
+                txtValue = title.textContent || title.innerText;
+                // Exibe ou oculta o item com base na pesquisa
+                items[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>

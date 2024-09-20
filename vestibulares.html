@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>/* Reset CSS para garantir consistência entre navegadores */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro */
+            line-height: 1.6;
+        }
+        
+        /* Estilo do cabeçalho */
+        header {
+            background-color: #1b5e20; /* Verde escuro */
+            color: #c8e6c9; /* Verde claro */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative; /* Mudei para relative */
+            z-index: 1000;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        /* Estilo da navegação */
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            background-color: #2e7d32; /* Verde intermediário */
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #c8e6c9; /* Verde claro */
+            font-size: 1.1em;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: #1b5e20;
+            border-radius: 5px;
+        }
+        
+        /* Estilo principal */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #66bb6a;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        /* Estilo da seção de livros */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .box {
+            background-color: #1c1c1c; /* Fundo escuro */
+            border: 1px solid #388e3c; /* Verde */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 45%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        
+        .titlesbook {
+            color: #66bb6a; /* Verde */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .content p {
+            color: #e0e0e0;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        
+        .livrocapa {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .livrocapa:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Estilo do rodapé */
+        footer {
+            background-color: #1b5e20;
+            color: #c8e6c9;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: #c8e6c9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer a:hover {
+            color: #66bb6a;
+        }
+        
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+        
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .box {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            header {
+                position: sticky; /* Para telas maiores, mantém o cabeçalho fixo */
+                top: 0;
+            }
+        }        
+        </style>
+    <meta name="description" content="Informações sobre vestibulares e datas de inscrição.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Vestibulares e Simulados</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="aulões.html">Aulões</a></li>
+                <li><a href="universidades.html">Universidades</a></li>
+                <li><a href="biblio.html">Biblioteca</a></li>
+                <li><a href="vestibulares.html">Vestibulares</a></li>
+                <li><a href="orientacao.html">Orientação Profissional</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Vestibulares, Siumulados e ENEM</h2>
+        <section class="busca-rapida">
+            <input type="text" id="search" placeholder="Buscar vestibulares..." onkeyup="buscarConteudo()">
+        </section>
+        <div id="vestibular-container" class="container">
+            <div class="box" data-title="ENEM">
+                <h1 class="titlesbook">ENEM</h1>
+                <div class="content">
+                    <p>Data: 3 e 10 de novembro de 2024</p>
+                    <p>Inscrições: 7 a 18 de setembro de 2024</p>
+                    <p><a href="https://drive.google.com/your-enem-link" target="_blank">Baixe o edital</a></p>
+                </div>
+            </div>
+            <div class="box" data-title="Vestibular Unicamp">
+                <h1 class="titlesbook">Vestibular Unicamp</h1>
+                <div class="content">
+                    <p>Data: 15 e 16 de dezembro de 2024</p>
+                    <p>Inscrições: 10 de setembro a 10 de outubro de 2024</p>
+                    <p><a href="https://drive.google.com/your-unicamp-link" target="_blank">Baixe o edital</a></p>
+                </div>
+            </div>
+            <div class="box" data-title="Vestibular UFMG">
+                <h1 class="titlesbook">Vestibular UFMG</h1>
+                <div class="content">
+                    <p>Data: 12 e 13 de janeiro de 2025</p>
+                    <p>Inscrições: 1 a 20 de novembro de 2024</p>
+                    <p><a href="https://drive.google.com/your-ufmg-link" target="_blank">Baixe o edital</a></p>
+                </div>
+            </div>
+            <div class="box" data-title="Vestibular FUVEST">
+                <h1 class="titlesbook">Vestibular FUVEST</h1>
+                <div class="content">
+                    <p>Data: 14 de janeiro de 2025</p>
+                    <p>Inscrições: 5 de outubro a 5 de novembro de 2024</p>
+                    <p><a href="https://drive.google.com/your-fuvest-link" target="_blank">Baixe o edital</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Acesse também no <a href="youtube.com">YouTube</a></p>
+        <p>Acesse também no <a href="instagram.com">Instagram</a></p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        function buscarConteudo() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const boxes = document.querySelectorAll('.box');
+
+            boxes.forEach(box => {
+                const title = box.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    box.style.display = '';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

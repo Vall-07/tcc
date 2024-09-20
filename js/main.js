@@ -1,19 +1,31 @@
 function buscarConteudo() {
-    var input, filter, ul, li, a, i, txtValue;
+    var input, filter, container, items, title, txtValue;
     input = document.getElementById("search");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("conteudo");
-    li = ul.getElementsByTagName("article");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("p")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
+
+    // Verifica se o input existe
+    if (!input) return;
+
+    // Define o container
+    container = document.querySelector(".video-container");
+    if (!container) return; // Se o contêiner não existir, sai da função
+
+    items = container.getElementsByClassName("video-item");
+
+    // Se não houver itens, sai da função
+    if (!items.length) return;
+
+    for (var i = 0; i < items.length; i++) {
+        title = items[i].getElementsByTagName("p")[0]; // Acha o título do vídeo
+        if (title) {
+            txtValue = title.textContent || title.innerText;
+            // Exibe ou oculta o item com base na pesquisa
+            items[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
         }
     }
 }
+
+
 
 function validarFormulario() {
     const nome = document.getElementById('nome').value;
