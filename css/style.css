@@ -507,7 +507,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px; /* Ajuste a altura conforme necessário */
     background-color: #000000;
 }
 
@@ -580,3 +580,10 @@ header {
     border-radius: 8px; /* Ajuste o valor conforme necessário para arredondar as bordas */
 }
 
+/* Estilo para o rodapé */
+footer {
+    padding: 5px 20px; /* Ajuste a altura conforme necessário */
+    background-color: #000000;
+    color: #6e6eff;
+    text-align: center;
+}
