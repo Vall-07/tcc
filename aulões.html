@@ -7,6 +7,12 @@
     <link rel="shortcut icon" type="image/png" href="img/20240923_164230.png">
     <meta name="description" content="Playlists de aulões para ajudar nos estudos para o Enem.">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilo para ocultar os vídeos por padrão */
+        .video-container {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,41 +42,84 @@
         <section class="project-description">
             <h2>Aulões</h2>
             <ul>
-                <li>
-                    <strong></strong> Coleção de videoaulas e conteúdos didáticos que aprimoram a preparação para exames como o ENEM, proporcionando aprendizagem dinâmica e acessível.
-                </li>
+                <li><strong></strong> Coleção de videoaulas e conteúdos didáticos que aprimoram a preparação para exames como o ENEM, proporcionando aprendizagem dinâmica e acessível.</li>
             </ul>
         </section>
         <section class="busca-rapida">
             <input type="text" id="search" placeholder="Buscar conteúdo..." onkeyup="buscarConteudo()">
         </section>
-        <div id="video-container" class="video-container">
+
+        <!-- Links das playlists -->
+        <section class="playlist-links">
+            <h3 onclick="togglePlaylist('biologia')">▶ Biologia</h3>
+            <h3 onclick="togglePlaylist('matematica')">▶ Matemática</h3>
+            <h3 onclick="togglePlaylist('redacao')">▶ Redação</h3>
+            <h3 onclick="togglePlaylist('geografia')">▶ Geografia</h3>
+            <h3 onclick="togglePlaylist('quimica')">▶ Química</h3>
+            <h3 onclick="togglePlaylist('fisica')">▶ Física</h3>
+        </section>
+
+        <!-- Playlist de Biologia -->
+        <section id="biologia" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/fo7JbUG5flY?si=4GJMPZRigIAO_4do" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fo7JbUG5flY?si=4GJMPZRigIAO_4do" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE BIOLOGIA PARA O ENEM</p>
             </article>
+        </section>
+
+        <!-- Playlist de Matemática -->
+        <section id="matematica" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/mOo8kH8hFhQ?si=6QA6Wwa1hLJ63yA6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mOo8kH8hFhQ?si=6QA6Wwa1hLJ63yA6" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE MATEMÁTICA PARA O ENEM</p>
             </article>
+        </section>
+
+        <!-- Playlist de Redação -->
+        <section id="redacao" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cVlfWDcIAfo?si=pQJxlyVUWBGNcyi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cVlfWDcIAfo?si=pQJxlyVUWBGNcyi8" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE REDAÇÃO PARA O ENEM</p>
             </article>
+        </section>
+
+        <!-- Playlist de Geografia -->
+        <section id="geografia" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/nrzFMOq1k-w?si=_vhef_efrKC847f3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nrzFMOq1k-w?si=_vhef_efrKC847f3" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE GEOGRAFIA PARA O ENEM</p>
             </article>
+        </section>
+
+        <!-- Playlist de Química -->
+        <section id="quimica" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/akKNhBT14gs?si=sTY8SslZEg2ErwTB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/akKNhBT14gs?si=sTY8SslZEg2ErwTB" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE QUÍMICA PARA O ENEM</p>
             </article>
+        </section>
+
+        <!-- Playlist de Física -->
+        <section id="fisica" class="video-container">
             <article class="video-item">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/V4lgNP65EiA?si=QX9dw3l2WnrALhCP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V4lgNP65EiA?si=QX9dw3l2WnrALhCP" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p>AULÃO DE FÍSICA PARA O ENEM</p>
             </article>
-        </div>
+        </section>
     </main>
+
+    <script>
+        // Função para exibir/ocultar a playlist quando clicada
+        function togglePlaylist(playlistId) {
+            const playlist = document.getElementById(playlistId);
+            if (playlist.style.display === "none" || playlist.style.display === "") {
+                playlist.style.display = "block";
+            } else {
+                playlist.style.display = "none";
+            }
+        }
+    </script>
+
     <script src="js/main.js"></script>
 </body>
 </html>
