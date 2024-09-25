@@ -7,29 +7,27 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000; /* Texto escuro */
     line-height: 1.6;
 }
 
 /* Estilo do cabeçalho */
 header {
-    background-color: #f44336; /* Verde escuro */
-    color: #ee8d8d; /* Verde claro */
+    background-color: #ff0000; /* Vermelho */
+    color: #ffffff; /* Texto branco */
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: relative; /* Altere para relative ou static */
+    position: relative;
     z-index: 1000;
 }
-
 
 header h1 {
     font-size: 2.5em;
     font-weight: 700;
 }
 
-/* Estilo da navegação */
 /* Estilo da navegação */
 nav ul {
     list-style-type: none;
@@ -44,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ee8d8d; /* Verde claro */
+    color: #000000; /* Texto preto */
     font-size: 1em; /* Tamanho da fonte ajustado */
     padding: 10px 15px; /* Padding ajustado */
     text-decoration: none;
@@ -52,17 +50,9 @@ nav ul li a {
     display: block; /* Faz com que a área clicável seja toda a caixa */
 }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row; /* Mantém os itens na horizontal */
-        align-items: center; /* Alinha os itens ao centro */
-        overflow-x: auto; /* Permite rolagem horizontal se necessário */
-    }
-
-    nav ul li {
-        margin: 5px; /* Espaço entre os itens */
-    }
+nav ul li a:hover {
+    background-color: #ff0000; /* Vermelho ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
 }
 
 /* Estilo do menu suspenso */
@@ -72,8 +62,8 @@ nav ul li a {
 }
 
 .dropbtn {
-    background-color: #f44336; /* Verde escuro */
-    color: #ee8d8d; /* Verde claro */
+    background-color: #ff0000; /* Vermelho */
+    color: #ffffff; /* Texto branco */
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -82,13 +72,13 @@ nav ul li a {
 }
 
 .dropbtn:hover {
-    background-color: #f44336; /* Verde mais claro ao passar o mouse */
+    background-color: #cc0000; /* Vermelho mais escuro ao passar o mouse */
 }
 
 .dropdown-content {
     display: none; /* Inicialmente escondido */
     position: absolute;
-    background-color: #f44336; /* Verde intermediário */
+    background-color: #ffffff; /* Fundo branco */
     min-width: 160px; /* Largura mínima */
     z-index: 1;
     border-radius: 5px; /* Bordas arredondadas */
@@ -106,7 +96,7 @@ nav ul li a {
 }
 
 .dropdown-content a {
-    color: #ee8d8d; /* Verde claro */
+    color: #000000; /* Texto preto */
     padding: 12px 16px;
     text-decoration: none;
     display: block; /* Faz com que a área clicável seja toda a caixa */
@@ -114,20 +104,13 @@ nav ul li a {
 }
 
 .dropdown-content a:hover {
-    background-color: #f44336; /* Verde escuro ao passar o mouse */
+    background-color: #ff0000; /* Vermelho ao passar o mouse */
+    color: #ffffff; /* Texto branco ao passar o mouse */
 }
 
 .dropdown:hover .dropdown-content {
     display: block; /* Exibe o conteúdo ao passar o mouse */
 }
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    .dropdown-content {
-        min-width: auto; /* Ajusta a largura no mobile */
-    }
-}
-
 
 /* Estilo principal */
 main {
@@ -162,7 +145,7 @@ main {
 .busca-rapida input {
     padding: 10px;
     width: 50%;
-    border: 1px solid #f44336;
+    border: 1px solid #ff0000; /* Vermelho */
     border-radius: 5px;
 }
 
@@ -170,9 +153,9 @@ main {
 form {
     max-width: 600px;
     margin: 40px auto;
-    background: #1c1c1c; /* Fundo escuro */
+    background: #ffffff; /* Fundo branco */
     padding: 30px;
-    border: 1px solid #f44336; /* Verde */
+    border: 1px solid #ff0000; /* Vermelho */
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -181,28 +164,30 @@ form label {
     display: block;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #e0e0e0;
+    color: #000000; /* Texto preto */
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ff0000;
     border-radius: 5px;
     outline: none;
     font-size: 1em;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #ffffff; /* Fundo branco */
+    color: #000000; /* Texto preto */
 }
 
-form input:focus, form textarea:focus {
-    border-color: #f44336; /* Verde */
+form input:focus,
+form textarea:focus {
+    border-color: #ff0000; /* Vermelho */
 }
 
 form button {
-    background-color: #f44336; /* Verde */
-    color: #ffffff;
+    background-color: #ff0000; /* Vermelho */
+    color: #ffffff; /* Texto branco */
     font-size: 1em;
     font-weight: 600;
     padding: 15px 30px;
@@ -213,7 +198,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #f44336; /* Verde mais escuro */
+    background-color: #cc0000; /* Vermelho mais escuro */
 }
 
 /* Estilo da seção de vídeos em destaque */
@@ -223,14 +208,14 @@ form button:hover {
 
 .videos-destaque h3 {
     font-size: 2em;
-    color: #f44336; /* Verde */
+    color: #ff0000; /* Vermelho */
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* Estilo da seção de descrição do projeto */
 .project-description {
-    background-color: #1c1c1c; /* Fundo escuro */
+    background-color: #ffffff; /* Fundo branco */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -239,158 +224,13 @@ form button:hover {
 
 .project-description h2 {
     font-size: 1.8em;
-    color: #f44336; /* Verde */
+    color: #ff0000; /* Vermelho */
     margin-bottom: 10px;
 }
 
 .project-description p {
     font-size: 1.2em;
-    color: #e0e0e0; /* Texto claro */
-}
-
-/* Reset CSS para garantir consistência entre navegadores */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
-    line-height: 1.6;
-}
-
-/* Estilo do cabeçalho */
-header {
-    background-color: #f44336; /* Verde escuro */
-    color: #ee8d8d; /* Verde claro */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: relative; /* Altere para relative ou static */
-    z-index: 1000;
-}
-
-
-header h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-}
-
-/* Estilo da navegação */
-/* Estilo da navegação */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centraliza os itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
-}
-
-nav ul li {
-    margin: 5px; /* Espaço entre os itens */
-}
-
-nav ul li a {
-    color: #ee8d8d; /* Verde claro */
-    font-size: 1em; /* Tamanho da fonte ajustado */
-    padding: 10px 15px; /* Padding ajustado */
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    display: block; /* Faz com que a área clicável seja toda a caixa */
-}
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: row; /* Mantém os itens na horizontal */
-        align-items: center; /* Alinha os itens ao centro */
-        overflow-x: auto; /* Permite rolagem horizontal se necessário */
-    }
-
-    nav ul li {
-        margin: 5px; /* Espaço entre os itens */
-    }
-}
-
-/* Estilo do menu suspenso */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: #f44336; /* Verde escuro */
-    color: #ee8d8d; /* Verde claro */
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1em; /* Ajusta o tamanho da fonte */
-    transition: background-color 0.3s ease;
-}
-
-.dropbtn:hover {
-    background-color: #f44336; /* Verde mais claro ao passar o mouse */
-}
-
-.dropdown-content {
-    display: none; /* Inicialmente escondido */
-    position: absolute;
-    background-color: #f44336; /* Verde intermediário */
-    min-width: 160px; /* Largura mínima */
-    z-index: 1;
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-}
-
-.dropdown-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content li {
-    text-align: left; /* Alinha texto à esquerda */
-}
-
-.dropdown-content a {
-    color: #ee8d8d; /* Verde claro */
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block; /* Faz com que a área clicável seja toda a caixa */
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #f44336; /* Verde escuro ao passar o mouse */
-}
-
-.dropdown:hover .dropdown-content {
-    display: block; /* Exibe o conteúdo ao passar o mouse */
-}
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    .dropdown-content {
-        min-width: auto; /* Ajusta a largura no mobile */
-    }
-}
-
-
-/* Estilo principal */
-main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    color: #f44336;
-    font-size: 2em;
-    margin-bottom: 20px;
+    color: #000000; /* Texto preto */
 }
 
 /* Estilo da seção de livros */
@@ -402,8 +242,8 @@ h2 {
 }
 
 .box {
-    background-color: #1c1c1c; /* Fundo escuro */
-    border: 1px solid #f44336; /* Verde */
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ff0000; /* Vermelho */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -417,13 +257,13 @@ h2 {
 }
 
 .titlesbook {
-    color: #f44336; /* Verde */
+    color: #ff0000; /* Vermelho */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .content p {
-    color: #e0e0e0;
+    color: #000000; /* Texto preto */
     font-size: 1em;
     margin-bottom: 15px;
 }
@@ -438,77 +278,13 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Estilo do rodapé */
-footer {
-    background-color: #f44336;
-    color: #ee8d8d;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-footer p {
-    margin-bottom: 10px;
-}
-
-footer a {
-    color: #ee8d8d;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-footer a:hover {
-    color: #f44336;
-}
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .box {
-        width: 100%;
-    }
-}
-
-
-/* Estilo do rodapé */
-footer {
-    background-color: #f44336;
-    color: #ee8d8d;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-}
-
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-    
-    .video-container {
-        flex-direction: column;
-    }
-    
-    .video-item {
-        flex: 1 1 100%;
-    }
-}
-
 /* Estilo para o header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px; /* Ajuste a altura conforme necessário */
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 /* Estilo para a logo */
@@ -518,23 +294,14 @@ header {
     display: block;
 }
 
-/* Estilo para o nome do site */
-.site-name {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f44336;
-    text-align: center;
-    flex-grow: 1;
-}
-
 /* Estilo para o menu dropdown */
 .dropdown {
     position: relative;
 }
 
 .dropbtn {
-    background-color: #000000;
-    color: #f44336;
+    background-color: #f44336;
+    color: #ffffff;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -547,7 +314,7 @@ header {
     right: 0;
     background-color:  #f44336;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
     z-index: 1;
 }
 
@@ -558,14 +325,14 @@ header {
 }
 
 .dropdown-content ul li a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content ul li a:hover {
-    background-color: #f1f1f1;
+    background-color: #000000;
 }
 
 .dropdown:hover .dropdown-content {
@@ -573,17 +340,10 @@ header {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .dropbtn {
-    border-radius: 8px; /* Ajuste o valor conforme necessário para arredondar as bordas */
-}
-
-/* Estilo para o rodapé */
-footer {
-    padding: 5px 20px; /* Ajuste a altura conforme necessário */
-    background-color: #000000;
-    color: #f44336;
-    text-align: center;
+    border-radius: 8px; 
+    /* Ajuste o valor conforme necessário para arredondar as bordas */
 }
