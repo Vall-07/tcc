@@ -294,27 +294,29 @@ header {
     display: block;
 }
 
-/* Estilo para o menu dropdown */
+/* Estilo do menu dropdown */
 .dropdown {
     position: relative;
 }
 
 .dropbtn {
-    background-color: #f44336;
-    color: #ffffff;
+    background-color: #f44336; /* Cor padrão */
+    color: #ffffff; /* Cor do texto */
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 8px; /* Arredonda as bordas */
+    transition: background-color 0.3s ease; /* Suaviza a transição */
 }
 
 .dropdown-content {
-    display: none;
+    display: none; /* Inicialmente escondido */
     position: absolute;
     right: 0;
-    background-color:  #f44336;
+    background-color: #f44336; /* Cor de fundo do menu dropdown */
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Ajuste de sombra */
     z-index: 1;
 }
 
@@ -325,25 +327,30 @@ header {
 }
 
 .dropdown-content ul li a {
-    color: rgb(255, 255, 255);
+    color: #ffffff; /* Cor do texto */
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
+    display: block; /* Área clicável maior */
 }
 
 .dropdown-content ul li a:hover {
-    background-color: #000000;
+    background-color: #000000; /* Cor de fundo ao passar o mouse */
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Exibe o menu ao passar o mouse */
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #ffffff;
+    background-color: #cc0000; /* Altera a cor do botão ao passar o mouse */
 }
 
-.dropbtn {
-    border-radius: 8px; 
-    /* Ajuste o valor conforme necessário para arredondar as bordas */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 100%; /* Cada vídeo ocupa 100% da largura em telas pequenas */
+    }
+
+    .box {
+        width: 90%; /* Ajusta a largura das caixas */
+    }
 }
