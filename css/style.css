@@ -7,18 +7,18 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ffffff; /* Fundo escuro */
-    color: #000000; /* Texto claro */
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
     line-height: 1.6;
 }
 
 /* Estilo do cabeçalho */
 header {
     background-color: #6e6eff; /* Verde escuro */
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     position: relative; /* Altere para relative ou static */
     z-index: 1000;
 }
@@ -44,7 +44,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     font-size: 1em; /* Tamanho da fonte ajustado */
     padding: 10px 15px; /* Padding ajustado */
     text-decoration: none;
@@ -73,7 +73,7 @@ nav ul li a {
 
 .dropbtn {
     background-color: #6e6eff; /* Verde escuro */
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -92,7 +92,7 @@ nav ul li a {
     min-width: 160px; /* Largura mínima */
     z-index: 1;
     border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgb(255, 255, 255); /* Sombra para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 .dropdown-content ul {
@@ -106,7 +106,7 @@ nav ul li a {
 }
 
 .dropdown-content a {
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 12px 16px;
     text-decoration: none;
     display: block; /* Faz com que a área clicável seja toda a caixa */
@@ -162,7 +162,7 @@ main {
 .busca-rapida input {
     padding: 10px;
     width: 50%;
-    border: 1px solid #000000;
+    border: 1px solid #c8e6c9;
     border-radius: 5px;
 }
 
@@ -170,25 +170,25 @@ main {
 form {
     max-width: 600px;
     margin: 40px auto;
-    background: #ffffff; /* Fundo escuro */
+    background: #1c1c1c; /* Fundo escuro */
     padding: 30px;
     border: 1px solid #6e6eff; /* Verde */
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgb(0, 0, 0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 form label {
     display: block;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #000000;
+    color: #e0e0e0;
 }
 
 form input, form textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #000000;
+    border: 1px solid #ddd;
     border-radius: 5px;
     outline: none;
     font-size: 1em;
@@ -230,10 +230,10 @@ form button:hover {
 
 /* Estilo da seção de descrição do projeto */
 .project-description {
-    background-color: #ffffff; /* Fundo escuro */
+    background-color: #1c1c1c; /* Fundo escuro */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
 }
 
@@ -245,7 +245,7 @@ form button:hover {
 
 .project-description p {
     font-size: 1.2em;
-    color: #000000; /* Texto claro */
+    color: #e0e0e0; /* Texto claro */
 }
 
 /* Reset CSS para garantir consistência entre navegadores */
@@ -257,18 +257,18 @@ form button:hover {
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #ffffff; /* Fundo escuro */
-    color: #000000; /* Texto claro */
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
     line-height: 1.6;
 }
 
 /* Estilo do cabeçalho */
 header {
     background-color: #6e6eff; /* Verde escuro */
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgb(255, 255, 255);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     position: relative; /* Altere para relative ou static */
     z-index: 1000;
 }
@@ -294,7 +294,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     font-size: 1em; /* Tamanho da fonte ajustado */
     padding: 10px 15px; /* Padding ajustado */
     text-decoration: none;
@@ -323,7 +323,7 @@ nav ul li a {
 
 .dropbtn {
     background-color: #6e6eff; /* Verde escuro */
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -342,7 +342,7 @@ nav ul li a {
     min-width: 160px; /* Largura mínima */
     z-index: 1;
     border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgb(255, 255, 255); /* Sombra para destaque */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 .dropdown-content ul {
@@ -356,7 +356,7 @@ nav ul li a {
 }
 
 .dropdown-content a {
-    color: #000000; /* Verde claro */
+    color: #c8e6c9; /* Verde claro */
     padding: 12px 16px;
     text-decoration: none;
     display: block; /* Faz com que a área clicável seja toda a caixa */
@@ -402,7 +402,7 @@ h2 {
 }
 
 .box {
-    background-color: #000000; /* Fundo escuro */
+    background-color: #1c1c1c; /* Fundo escuro */
     border: 1px solid #6e6eff; /* Verde */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -413,7 +413,7 @@ h2 {
 
 .box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .titlesbook {
@@ -423,7 +423,7 @@ h2 {
 }
 
 .content p {
-    color: #000000;
+    color: #e0e0e0;
     font-size: 1em;
     margin-bottom: 15px;
 }
@@ -441,7 +441,7 @@ h2 {
 /* Estilo do rodapé */
 footer {
     background-color: #6e6eff;
-    color: #000000;
+    color: #c8e6c9;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -452,7 +452,7 @@ footer p {
 }
 
 footer a {
-    color: #000000;
+    color: #c8e6c9;
     text-decoration: none;
     font-weight: 600;
 }
@@ -481,7 +481,7 @@ footer a:hover {
 /* Estilo do rodapé */
 footer {
     background-color: #6e6eff;
-    color: #000000;
+    color: #c8e6c9;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -508,7 +508,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px; /* Ajuste a altura conforme necessário */
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 /* Estilo para a logo */
@@ -533,7 +533,7 @@ header {
 }
 
 .dropbtn {
-    background-color: #ffffff;
+    background-color: #000000;
     color: #6e6eff;
     padding: 16px;
     font-size: 16px;
@@ -547,7 +547,7 @@ header {
     right: 0;
     background-color:  #6e6eff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -558,14 +558,14 @@ header {
 }
 
 .dropdown-content ul li a {
-    color: rgb(255, 255, 255);
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content ul li a:hover {
-    background-color: #000000;
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -573,7 +573,7 @@ header {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #fbfbfb;
+    background-color: #000000;
 }
 
 .dropbtn {
@@ -583,8 +583,7 @@ header {
 /* Estilo para o rodapé */
 footer {
     padding: 5px 20px; /* Ajuste a altura conforme necessário */
-    background-color: #ffffff;
+    background-color: #000000;
     color: #6e6eff;
     text-align: center;
 }
-
