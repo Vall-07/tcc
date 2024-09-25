@@ -106,10 +106,13 @@
         function buscarConteudo() {
             const input = document.getElementById('search').value.toLowerCase();
             const boxes = document.querySelectorAll('.box');
-
+    
             boxes.forEach(box => {
-                const title = box.getAttribute('data-title').toLowerCase();
-                if (title.includes(input)) {
+                const title = box.querySelector('h1').textContent.toLowerCase();
+                const content = box.querySelector('.content').textContent.toLowerCase();
+    
+                // Verifica se o input está presente no título ou no conteúdo
+                if (title.includes(input) || content.includes(input)) {
                     box.style.display = '';
                 } else {
                     box.style.display = 'none';
@@ -117,5 +120,6 @@
             });
         }
     </script>
+    
 </body>
 </html>
