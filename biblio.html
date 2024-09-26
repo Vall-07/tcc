@@ -27,6 +27,7 @@
                     <li><a href="orientacao.html">Carreira</a></li>
                     <li><a href="noticias.html">Jornal</a></li>
                     <li><a href="contato.html">Contato</a></li>
+                    <li><button id="theme-toggle" class="theme-toggle-btn">☀️🌙</button></li>
                 </ul>
             </div>
         </div>
@@ -478,6 +479,22 @@
             }
         }
     }
+
+   document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light-theme';
+    document.body.classList.add(currentTheme);
+
+    themeToggleBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+
+        const newTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+        localStorage.setItem('theme', newTheme);
+    });
+});
+
+
     </script>
 </body>
 </html>

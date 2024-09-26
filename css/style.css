@@ -463,3 +463,508 @@ header {
         right: 10px;
     }
 }
+
+/* Reset CSS para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS para cores */
+:root {
+    --primary-color: #3498db; /* Azul */
+    --secondary-color: #ecf0f1; /* Cinza claro */
+    --text-color: #2c3e50; /* Azul escuro */
+    --hover-color: #2980b9; /* Azul mais escuro */
+    --background-color: #ffffff; /* Branco */
+    --focus-color: #27ae60; /* Verde */
+}
+
+body.light-theme {
+    --primary-color: #3498db; /* Azul */
+    --secondary-color: #ecf0f1; /* Cinza claro */
+    --text-color: #2c3e50; /* Azul escuro */
+    --hover-color: #2980b9; /* Azul mais escuro */
+    --background-color: #ffffff; /* Branco */
+    --focus-color: #27ae60; /* Verde */
+}
+
+body.dark-theme {
+    --primary-color: #3498db; /* Azul escuro */
+    --secondary-color: #34495e; /* Cinza escuro */
+    --text-color: #ecf0f1; /* Cinza claro */
+    --hover-color: #3498db; /* Verde */
+    --background-color: #2c3e50; /* Azul escuro */
+    --focus-color: #e74c3c; /* Vermelho */
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-size: 1em;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+    outline: none;
+}
+
+/* Estilo do menu suspenso */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    font-family: inherit; /* Garantir que a fonte seja a mesma */
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: var(--hover-color);
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content li {
+    text-align: left;
+}
+
+.dropdown-content a,
+.theme-toggle-btn {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit; /* Garantir que a fonte seja a mesma */
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus,
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+    outline: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--hover-color);
+}
+
+/* Estilo principal */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo da seção de vídeos */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video-item {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* Estilo da busca */
+.busca-rapida {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.busca-rapida input {
+    padding: 10px;
+    width: 50%;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Estilo do formulário de contato */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--secondary-color);
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--focus-color);
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+    background-color: var(--hover-color);
+    outline: none;
+}
+
+/* Estilo da seção de vídeos em destaque */
+.videos-destaque {
+    margin: 40px 0;
+}
+
+.videos-destaque h3 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo da seção de descrição do projeto */
+.project-description {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.project-description h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-description p {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+/* Estilo da seção de livros */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.titlesbook {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: var(--text-color);
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.livrocapa {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.livrocapa:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: var(--background-color);
+}
+
+/* Estilo para a logo */
+.logo a img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+/* Estilo do menu dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-family: inherit; /* Garantir que a fonte seja a mesma */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li a,
+.theme-toggle-btn {
+    color: var(--secondary-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: inherit; /* Garantir que a fonte seja a mesma */
+}
+
+.dropdown-content ul li a:hover,
+.dropdown-content ul li a:focus,
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus {
+    background-color: var(--text-color);
+    outline: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--hover-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 1 1 100%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo a img {
+        width: 80px;
+    }
+
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .dropbtn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .dropdown-content ul li a {
+        padding: 10px;
+    }
+
+    .video-item iframe {
+        height: 200px;
+    }
+
+    .busca-rapida input {
+        width: 80%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        padding: 10px 20px;
+    }
+
+    .videos-destaque h3 {
+        font-size: 1.5em;
+    }
+
+    .project-description h2 {
+        font-size: 1.5em;
+    }
+
+    .project-description p {
+        font-size: 1em;
+    }
+
+    .titlesbook {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.9em;
+    }
+
+    /* Ajuste para o menu dropdown no canto superior direito */
+    .dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}

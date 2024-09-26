@@ -47,3 +47,17 @@ function validarFormulario() {
     alert('Mensagem enviada com sucesso!');
     return true; // Enviar o formulário
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light-theme';
+    document.body.classList.add(currentTheme);
+
+    themeToggleBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+
+        const newTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+        localStorage.setItem('theme', newTheme);
+    });
+});
