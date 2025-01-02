@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="img/Logo.png">
+        <link rel="stylesheet" href="css/estilo.css">
+        <style>/* Estilos gerais */
+            .main {
+                text-align: center;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+                margin-bottom: 20px;
+            }
+            
+            /* Estilo da galeria */
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adapta para diferentes larguras */
+                gap: 16px;
+                padding: 10px;
+            }
+            
+            .gallery-item {
+                width: 100%;
+                height: auto;
+                object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+                border-radius: 8px; /* Bordas arredondadas para um visual mais agradável */
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .gallery-item:hover {
+                transform: scale(1.05); /* Efeito de zoom quando a imagem é sobrevoada */
+            }
+            
+            /* Ajustes de responsividade para dispositivos menores */
+            @media (max-width: 768px) {
+                .gallery {
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas menores em telas pequenas */
+                }
+            }
+            
+            @media (max-width: 480px) {
+                h1 {
+                    font-size: 1.5em;
+                }
+            }
+            </style>
+
+        <title>POD ETEC</title>
+    </head>
+
+    <body>
+        <header>
+            <p class="indice" onclick="openNav()">≡</p>
+
+            <img class="logo" src="img/Logo.png" alt="Podcast etec">
+
+            <div class="pages">
+                <a href="index.html" class="sem-linha"><p>Início</p></a>
+                <a href="episodios.html" class="sem-linha"><p>Episódios</p></a>
+                <a href="creditos.html" class="sem-linha"><p>Créditos</p></a>
+                <a href="galeria.html" class="sem-linha"><p>Galeria</p></a>
+                <a href="contato.html" class="sem-linha"><p>Contatos</p></a>
+                <button id="theme-toggle" class="theme-toggle-btn"><p>☀️🌙</p></button>
+            </div>
+        </header>
+
+        <div class="navCelular none" id="nav">
+            <a href="index.html" class="sem-linha"><p>Início</p></a>
+            <a href="episodios.html" class="sem-linha"><p>Episódios</p></a>
+            <a href="creditos.html" class="sem-linha"><p>Créditos</p></a>
+            <a href="galeria.html" class="sem-linha"><p>Galeria</p></a>
+            <a href="contato.html" class="sem-linha"><p>Contatos</p></a>
+            <button id="theme-toggle-mobile" class="theme-toggle-btn"><p>☀️🌙</p></button>
+        </div>
+        <div class="shadow none" id="shadow"></div>
+
+        <div class="main">
+            <h1>Galeria de Fotos</h1>
+            <div class="gallery">
+                <img src="img/galeria/01.jpg" alt="Imagem 1" class="gallery-item">
+                <img src="img/galeria/02.jpg" alt="Imagem 2" class="gallery-item">
+                <img src="img/galeria/03.jpg" alt="Imagem 3" class="gallery-item">
+                <img src="img/galeria/04.jpg" alt="Imagem 4" class="gallery-item">
+                <img src="img/galeria/05.jpg" alt="Imagem 5" class="gallery-item">
+                <img src="img/galeria/06.jpg" alt="Imagem 6" class="gallery-item">
+                <img src="img/galeria/07.jpg" alt="Imagem 7" class="gallery-item">
+                <img src="img/galeria/08.jpg" alt="Imagem 8" class="gallery-item">
+                <img src="img/galeria/09.jpg" alt="Imagem 9" class="gallery-item">
+                <img src="img/galeria/10.jpg" alt="Imagem 10" class="gallery-item">
+                <img src="img/galeria/11.jpg" alt="Imagem 11" class="gallery-item">
+                <img src="img/galeria/12.jpg" alt="Imagem 12" class="gallery-item">
+                <img src="img/galeria/13.jpg" alt="Imagem 13" class="gallery-item">
+                <img src="img/galeria/14.jpg" alt="Imagem 14" class="gallery-item">
+                <img src="img/galeria/15.jpg" alt="Imagem 15" class="gallery-item">
+                <img src="img/galeria/16.jpg" alt="Imagem 16" class="gallery-item">
+                <img src="img/galeria/17.jpg" alt="Imagem 17" class="gallery-item">
+                <img src="img/galeria/18.jpg" alt="Imagem 18" class="gallery-item">
+            </div>
+        </div>
+        
+        <div class="redes"> 
+            <div class="links">
+                <a href="https://open.spotify.com/show/79J3OGBzKZvC5xZnluuaKY"><img src="img/logoSpotify.png" alt="link para o spotify"></a>
+                <a href="https://www.instagram.com/pod.etec"><img src="img/logoInst.png" alt="link para o instagram"></a>
+                <a href="https://www.youtube.com/@PodcastEtec-n9x"><img src="img/logoYt.png" alt="link para o youtube"></a>
+            </div>
+        </div>
+        <footer style="text-align: center; padding: 10px; background-color: #141f30; color: #ffffff; font-size: 0.9em;">
+            <p>A ETEC Lins é uma instituição de ensino técnico e profissionalizante pública, pertencente ao Centro Estadual de Educação Tecnológica Paula Souza (CEETEPS).</p>
+        </footer>
+        <footer style="text-align: center; padding: 10px; background-color: #141f30; color: #ffffff; font-size: 0.9em;">
+            <p> ETEC Lins
+                Escola Técnica Estadual de Lins
+                Rua São Pedro, 300
+                Vila Perin
+                Lins/SP
+                &copy;Copyright 2024. Todos os direitos reservados.</p>
+        </footer>
+        <footer style="text-align: center; padding: 10px; background-color: #232a33; color: #ffffff; font-size: 0.9em;">
+            <p >Desenvolvido pela turma do 3° ano de Informática para Internet 2024 [Classe descentralizada de Promissão].</p>
+        </footer>
+
+        
+        <script src="javascript/script.js"></script>
+    </body>
+</html>

@@ -1,58 +1,71 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-    <link rel="shortcut icon" type="image/png" href="img/20240923_164230.png">
-    <meta name="description" content="Entre em contato e envie suas dúvidas ou sugestões.">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="img/20240923_164230.png" alt="Logo">
-            </a>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">☰</button>
-            <div class="dropdown-content">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="aulões.html">Aulões</a></li>
-                    <li><a href="universidades.html">Universidades</a></li>
-                    <li><a href="biblio.html">Biblioteca</a></li>
-                    <li><a href="vestibulares.html">Vestibulares</a></li>
-                    <li><a href="orientacao.html">Carreira</a></li>
-                    <li><a href="noticias.html">Jornal</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><button id="theme-toggle" class="theme-toggle-btn">☀️🌙</button></li>
-                </ul>
-            </div>
+<!DOCTYPE html>     
+<html>     
+<head>         
+    <meta charset="UTF-8">         
+    <link rel="stylesheet" href="css/estilo.css">         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+    <link rel="shortcut icon" type="image/png" href="img/Logo.png">     
+</head>      
+
+<body>         
+    <header>             
+        <p class="indice" onclick="openNav()">≡</p>              
+        <img class="logo" src="img/Logo.png" alt="Podcast etec">              
+        <div class="pages">
+            <a href="index.html" class="sem-linha"><p>Início</p></a>
+            <a href="episodios.html" class="sem-linha"><p>Episódios</p></a>
+            <a href="creditos.html" class="sem-linha"><p>Créditos</p></a>
+            <a href="galeria.html" class="sem-linha"><p>Galeria</p></a>
+            <a href="contato.html" class="sem-linha"><p>Contatos</p></a>
+            <button id="theme-toggle" class="theme-toggle-btn"><p>☀️🌙</p></button>
         </div>
     </header>
-    
-    <main>
-        <section class="project-description">
-            <h2>Contato</h2>
 
-            <ul>
-                <li>
-                    <strong></strong> Espaço para esclarecer dúvidas ou obter informações adicionais sobre o Portal de Estudos, garantindo suporte necessário na jornada educativa.
-                </li>
-            </ul>
-        </section>
-        <form action="mailto:portaldeestudos2024@gmail.com" method="post" enctype="text/plain" onsubmit="return validarFormulario()">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
-    <script src="js/main.js"></script>
-</body>
+    <div class="navCelular none" id="nav">
+        <a href="index.html" class="sem-linha"><p>Início</p></a>
+        <a href="episodios.html" class="sem-linha"><p>Episódios</p></a>
+        <a href="creditos.html" class="sem-linha"><p>Créditos</p></a>
+        <a href="galeria.html" class="sem-linha"><p>Galeria</p></a>
+        <a href="contato.html" class="sem-linha"><p>Contatos</p></a>
+        <button id="theme-toggle-mobile" class="theme-toggle-btn"><p>☀️🌙</p></button>
+    </div>
+    <div class="shadow none" id="shadow" onclick="openNav()"></div>                              
+
+    <div class="main">                 
+        <h1>Contatos</h1>                 
+        <p class="text">   
+            Entre em contato conosco por meio das nossas redes sociais. Estamos ansiosos para ouvir de você! Se você tiver dúvidas, sugestões ou feedback sobre nossos episódios ou qualquer outro aspecto do nosso podcast, não hesite em nos contatar. Sua opinião é muito importante para nós e nos ajuda a melhorar a qualidade do conteúdo que oferecemos.                   
+        </p>                 
+        <div class="contat">                                    
+            <a href="mailto:podetec430@gmail.com">
+                <img class="icons" src="img/IconEmail.png" alt="link para email"> 
+            </a>
+            <h3>Clique no ícone para enviar uma mensagem diretamente para nossa equipe!</h3>                 
+        </div>                          
+    </div>              
+    <div class="redes"> 
+        <div class="links">
+            <a href="https://open.spotify.com/show/79J3OGBzKZvC5xZnluuaKY"><img src="img/logoSpotify.png" alt="link para o spotify"></a>
+            <a href="https://www.instagram.com/pod.etec"><img src="img/logoInst.png" alt="link para o instagram"></a>
+            <a href="https://www.youtube.com/@PodcastEtec-n9x"><img src="img/logoYt.png" alt="link para o youtube"></a>
+        </div>
+    </div>
+    <footer style="text-align: center; padding: 10px; background-color: #141f30; color: #ffffff; font-size: 0.9em;">
+        <p>A ETEC Lins é uma instituição de ensino técnico e profissionalizante pública, pertencente ao Centro Estadual de Educação Tecnológica Paula Souza (CEETEPS).</p>
+    </footer>
+    <footer style="text-align: center; padding: 10px; background-color: #141f30; color: #ffffff; font-size: 0.9em;">
+        <p> ETEC Lins
+            Escola Técnica Estadual de Lins
+            Rua São Pedro, 300
+            Vila Perin
+            Lins/SP
+            &copy;Copyright 2024. Todos os direitos reservados.</p>
+    </footer>
+    <footer style="text-align: center; padding: 10px; background-color: #232a33; color: #ffffff; font-size: 0.9em;">
+        <p >Desenvolvido pela turma do 3° ano de Informática para Internet 2024 [Classe descentralizada de Promissão].</p>
+    </footer>
+
+
+    <script src="javascript/script.js"></script>     
+</body>        
 </html>
